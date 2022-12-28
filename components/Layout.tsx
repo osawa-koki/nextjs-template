@@ -21,7 +21,7 @@ const Layout = ({ children, title = Setting.title }: Props) => (
       <nav>
         {
           pages.map((page, index) => (
-            <Link key={index} href={Setting.isProd ? `${Setting.basePath}${page.path}` : page.path}>
+            <Link key={index} href={page.path}>
               {page.name}
             </Link>
           ))
