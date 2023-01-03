@@ -1,14 +1,17 @@
-# Next.jsテンプレート
+# simple-next-study.ssg.ts
 
-よく使うNext.jsのテンプレート。  
+Next.jsの学習用プロジェクト。  
+TypeScriptとNext.jsによるSSGサイトの構築サンプル。  
+
+よく使用すると思われるBootstrapとscssはインストール済み。  
 
 ## 実行方法
 
 ```shell
-# イロイロインストール
-yarn install
+# モジュールのインストール
+yarn
 
-# デバグ用実行
+# 開発用実行
 yarn dev
 
 # ビルド
