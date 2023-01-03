@@ -1,12 +1,7 @@
 
-const EnvInfo = require("./next.config.js");
-
-const isProd = process.env.NODE_ENV === "production";
-
-const Setting = {
-  isProd,
-  title: "My Next App",
-  basePath: EnvInfo.basePath,
+const setting = {
+  isProd: process.env.NODE_ENV === 'production',
+  basePath: '/simple-next-study.ssg.ts/'
 };
 
-export default Setting;
+export default setting;
