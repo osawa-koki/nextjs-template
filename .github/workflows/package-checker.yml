@@ -34,7 +34,7 @@ jobs:
           text: |
             Deprecated package(s) found!
             -> ${{ env.project_name }}
-            -> RUN yarn outdated
+            -> RUN yarn outdated --latest
           channel: ${{ env.slack_channel }}
           username: ${{ env.slack_username }}
         env:
