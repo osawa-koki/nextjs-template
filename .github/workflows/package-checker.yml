@@ -6,7 +6,7 @@ on:
       - main
       - develop
   schedule:
-    - cron: '0 */6 * * *' # 4回実行する。1回あたり4時間おきに実行。
+    - cron: '0 */6 * * *'
 
 env:
   project_name: nextjs-template
