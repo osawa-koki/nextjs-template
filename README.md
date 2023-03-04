@@ -1,7 +1,7 @@
 # nextjs-template
 
 🌰🌰🌰 Next.jsのテンプレートです。  
-よく使用すると思われるBootstrapとscssは既にインストールしてあります。  
+よく使用すると思われる`Bootstrap`と`SCSS`は既にインストールしてあります。  
 
 ## 実行方法
 
