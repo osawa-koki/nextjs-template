@@ -22,7 +22,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@types/bootstrap": "^5.2.5",
+    "@types/bootstrap": "^5.2.6",
     "@types/react-bootstrap": "^0.32.32",
     "bootstrap": "^5.2.3",
     "next": "^13.2.3",
