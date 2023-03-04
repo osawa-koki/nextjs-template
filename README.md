@@ -33,4 +33,3 @@ Depricatedなパッケージを使用している場合にその旨を通知し�
 | シークレット名 | 説明 |
 | --- | --- |
 | SLACK_WEBHOOK_URL | SlackのWebhook URL |
- GH_PAT | GitHubのPersonal Access Token |
