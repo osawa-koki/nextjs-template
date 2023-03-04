@@ -24,6 +24,8 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
           cache: "yarn"
+      - name: Install packages
+        run: yarn install
       - name: Upgrade packages
         run: yarn upgrade
       - name: Test
