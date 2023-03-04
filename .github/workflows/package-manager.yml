@@ -13,7 +13,6 @@ permissions:
   contents: write
 
 env:
-  project_name: nextjs-template
   slack_channel: '#alert'
   slack_username: 'Github Actions'
   node_version: '18.x'
@@ -44,7 +43,7 @@ jobs:
             git config user.name "BOT.${{ github.actor }}"
             git add .
             git commit -m "Auto-upgraded packages $(date +'%Y-%m-%d %H:%M:%S')" --allow-empty
-            git push https://${{ github.actor }}:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+            git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
           else
             echo "No changes to commit"
           fi
@@ -71,7 +70,7 @@ jobs:
           status: 'failure'
           text: |
             Deprecated package(s) found!
-            -> ${{ env.project_name }}
+            -> ${{ github.repository }}
             -> run `yarn outdated` and `yarn upgrade [--latest]` to fix it.
           channel: ${{ env.slack_channel }}
           username: ${{ env.slack_username }}
