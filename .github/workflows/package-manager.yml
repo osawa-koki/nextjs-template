@@ -54,6 +54,8 @@ jobs:
         with:
           node-version: ${{ env.node_version }}
           cache: "yarn"
+      - name: Install packages
+        run: yarn install
       - name: Check for deprecated packages
         id: check
         run: yarn outdated
