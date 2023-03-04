@@ -16,6 +16,11 @@ yarn dev
 yarn build
 ```
 
+## CI/CD
+
+`GitHub Actions`を使用しています。  
+`main`ブランチにマージされると自動でデプロイされます。  
+
 ## GitHubシークレットの設定
 
 GitHub Actionsで使用するシークレットを設定します。  
