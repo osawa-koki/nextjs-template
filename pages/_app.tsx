@@ -1,3 +1,5 @@
+import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../styles/styles.scss';
@@ -14,6 +16,7 @@ import { DataContext } from '../src/DataContext';
 import { useState } from 'react';
 import SharedData from '../src/SharedData';
 
+// eslint-disable-next-line react/prop-types
 export default function MyApp({ Component, pageProps }) {
 
   const [sharedData, setSharedData] = useState<SharedData>({
