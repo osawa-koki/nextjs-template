@@ -1,20 +1,19 @@
-
 const pages = [
   {
-    emoji: "🏠",
-    path: "/",
-    name: "Home",
+    emoji: '🏠',
+    path: '/',
+    name: 'Home',
   },
   {
-    emoji: "📖",
-    path: "/about/",
-    name: "About",
+    emoji: '📖',
+    path: '/about/',
+    name: 'About',
   },
   {
-    emoji: "💓",
-    path: "/contact/",
-    name: "Contact",
+    emoji: '💓',
+    path: '/contact/',
+    name: 'Contact',
   },
-];
+]
 
-export default pages;
+export default pages
