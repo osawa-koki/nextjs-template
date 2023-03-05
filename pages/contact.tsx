@@ -4,13 +4,14 @@ import { Button, Alert, Form } from 'react-bootstrap';
 import Layout from "../components/Layout";
 
 import PageBlock from "../components/Menu";
+import { DataContext } from "../src/DataContext";
 
 const mail_regex = new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
 
 export default function HelloWorld() {
 
-  let [count, setCount] = useState(0);
-  let [mail, setMail] = useState('osawa-koki@example.com');
+  const [count, setCount] = useState(0);
+  const { sharedData, setSharedData } = React.useContext(DataContext);
 
   return (
     <Layout>
@@ -25,13 +26,18 @@ export default function HelloWorld() {
         <hr />
         <Form.Group controlId="formBasicEmail" className="mt-3">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" value={mail} onInput={(e) => {setMail((e.target as HTMLInputElement).value)}} />
+          <Form.Control type="email" placeholder="Enter email" value={sharedData.mail} onInput={(e) => {
+            setSharedData({
+              ...sharedData,
+              mail: (e.target as HTMLInputElement).value,
+            });
+          }} />
           <Form.Text>
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
         {
-          mail_regex.test(mail) ? (
+          mail_regex.test(sharedData.email) ? (
             <Alert variant="success">Your email is valid.</Alert>
           ) : (
             <Alert variant="danger">Your email is invalid.</Alert>
