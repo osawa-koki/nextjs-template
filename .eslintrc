@@ -1,5 +1,8 @@
 {
   "parser": "@typescript-eslint/parser",
+  "globals": {
+    "process": "readonly"
+  },
   "plugins": [
     "react-hooks",
     "prettier"
