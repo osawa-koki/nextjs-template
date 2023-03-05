@@ -1,6 +1,6 @@
 type SharedData = {
-  username: string
-  email: string
-}
+  username: string;
+  email: string;
+};
 
-export default SharedData
+export default SharedData;
