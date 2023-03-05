@@ -19,7 +19,9 @@
     "build": "next build && next export -o ./dist",
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "lint": "eslint --ext .js,.ts . --fix --max-warnings 0",
+    "prettify": "prettier --write ./**/*.{ts,js,json}"
   },
   "dependencies": {
     "@types/bootstrap": "^5.2.6",
