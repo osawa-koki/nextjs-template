@@ -1,5 +1,5 @@
 
-const Env = require('./next.config.js');
+import Env from './next.config.js';
 const isProd = process.env.NODE_ENV === 'production';
 
 const setting = {
