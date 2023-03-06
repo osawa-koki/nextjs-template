@@ -1,4 +1,5 @@
 import React from 'react';
+import { AppProps } from 'next/app';
 import { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,8 +17,7 @@ import setting from '../setting';
 import { DataContext } from '../src/DataContext';
 import SharedData from '../src/SharedData';
 
-// eslint-disable-next-line react/prop-types
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
 
   const [sharedData, setSharedData] = useState<SharedData>({
     username: '',
