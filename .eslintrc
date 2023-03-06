@@ -7,7 +7,10 @@
   "parser": "@typescript-eslint/parser",
   "globals": {
     "process": "readonly",
-    "window": "readonly"
+    "window": "readonly",
+    "describe": "readonly",
+    "test": "readonly",
+    "expect": "readonly"
   },
   "plugins": [
     "react-hooks",
