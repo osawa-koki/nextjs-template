@@ -20,10 +20,11 @@ env:
 jobs:
   upgrade-packages:
     runs-on: ubuntu-latest
-    if: ${{ github.ref }} == 'refs/heads/develop'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: develop
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -51,10 +52,11 @@ jobs:
   check-deprecated:
     needs: upgrade-packages
     runs-on: ubuntu-latest
-    if: ${{ github.ref }} == 'refs/heads/develop'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          ref: develop
       - name: Install Node.js and Yarn
         uses: actions/setup-node@v3
         with:
