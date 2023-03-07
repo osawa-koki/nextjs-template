@@ -20,7 +20,7 @@ env:
 jobs:
   upgrade-packages:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/develop'
+    if: ${{ github.ref }} == 'refs/heads/develop'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -51,7 +51,7 @@ jobs:
   check-deprecated:
     needs: upgrade-packages
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/develop'
+    if: ${{ github.ref }} == 'refs/heads/develop'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
