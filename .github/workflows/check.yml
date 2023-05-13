@@ -5,6 +5,12 @@ on:
     branches:
       - main
       - develop
+      - 'issue/*'
+  pull_request:
+    branches:
+      - main
+      - develop
+      - 'issue/*'
 
 jobs:
   check:
