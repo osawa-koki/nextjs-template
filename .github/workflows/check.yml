@@ -1,4 +1,4 @@
-name: Run tests, linting, and prettify
+name: test, lint, prettier, audit
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [18.x, 20.x]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -29,7 +29,9 @@ jobs:
         run: yarn install
       - name: Run tests
         run: yarn test
-      - name: Run linter
-        run: yarn lint
+      - name: Linter check
+        run: yarn lint:check
+      - name: Prettier check
+        run: yarn prettier:check
       - name: Check for security vulnerabilities
         run: yarn audit
