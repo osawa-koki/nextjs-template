@@ -17,10 +17,10 @@
     "dev": "yarn develop",
     "develop": "next",
     "build": "next build && next export -o ./dist",
-    "test": "jest",
     "start": "next start",
-    "type-check": "tsc",
-    "lint": "eslint .",
+    "test": "jest",
+    "lint:check": "eslint .",
+    "lint:write": "eslint --fix .",
     "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check ."
   },
