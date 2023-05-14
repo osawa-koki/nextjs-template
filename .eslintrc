@@ -12,10 +12,7 @@
     "test": "readonly",
     "expect": "readonly"
   },
-  "plugins": [
-    "react-hooks",
-    "prettier"
-  ],
+  "plugins": ["react-hooks", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",

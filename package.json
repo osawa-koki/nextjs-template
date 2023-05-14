@@ -20,8 +20,9 @@
     "test": "jest",
     "start": "next start",
     "type-check": "tsc",
-    "lint": "eslint --ext .ts . --fix --max-warnings 0",
-    "prettify": "prettier --write ./**/*.{ts,js,json}"
+    "lint": "eslint .",
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check ."
   },
   "dependencies": {
     "@types/bootstrap": "^5.2.6",
