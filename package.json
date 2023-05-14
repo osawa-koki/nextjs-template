@@ -9,7 +9,7 @@
     "url": "https://github.com/osawa-koki/nextjs-template.git"
   },
   "engines": {
-    "node": ">=16.0.0",
+    "node": ">=18.0.0",
     "yarn": ">=1.22.0"
   },
   "private": false,
@@ -17,11 +17,12 @@
     "dev": "yarn develop",
     "develop": "next",
     "build": "next build && next export -o ./dist",
-    "test": "jest",
     "start": "next start",
-    "type-check": "tsc",
-    "lint": "eslint --ext .ts . --fix --max-warnings 0",
-    "prettify": "prettier --write ./**/*.{ts,js,json}"
+    "test": "jest",
+    "lint:check": "eslint .",
+    "lint:write": "eslint --fix .",
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check ."
   },
   "dependencies": {
     "@types/bootstrap": "^5.2.6",
