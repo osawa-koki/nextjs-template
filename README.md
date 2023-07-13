@@ -1,13 +1,13 @@
 # nextjs-template
 
-🌰🌰🌰 Next.js のテンプレートです。  
+🌰🌰🌰 Next.jsアプリのテンプレートです。  
 よく使用すると思われる`Bootstrap`と`SCSS`は既にインストールしてあります。  
 
 ## 実行方法
 
 ```shell
 # モジュールのインストール
-yarn
+yarn install
 
 # 開発用実行
 yarn dev
@@ -20,5 +20,3 @@ yarn build
 
 `GitHub Actions`を使用しています。  
 `main`ブランチにマージされると自動でデプロイされます。  
-
-また、`develop`ブランチにマージされるとテストが実行されます。  
