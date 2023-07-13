@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import pages from '../pages';
-import setting from '../setting';
+import React from 'react'
+import Link from 'next/link'
+import Layout from '../components/Layout'
+import pages from '../pages'
+import setting from '../setting'
 
-export default function Home() {
+export default function Home (): JSX.Element {
   return (
     <Layout menu={false} footer={false}>
       <div id="Index">
@@ -16,10 +16,10 @@ export default function Home() {
               <Link key={index} href={page.path}>
                 {page.name}
               </Link>
-            );
+            )
           })}
         </div>
       </div>
     </Layout>
-  );
+  )
 }

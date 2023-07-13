@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import { Button, Alert, Form } from 'react-bootstrap';
-import Layout from '../components/Layout';
+import { Button, Alert, Form } from 'react-bootstrap'
+import Layout from '../components/Layout'
 
-import { DataContext } from '../src/DataContext';
+import { DataContext } from '../src/DataContext'
 
-const mail_regex = new RegExp(
-  /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-);
+const mailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
-export default function ContactPage() {
-  const [count, setCount] = useState(0);
-  const { sharedData, setSharedData } = React.useContext(DataContext);
+export default function ContactPage (): JSX.Element {
+  const [count, setCount] = useState(0)
+  const { sharedData, setSharedData } = React.useContext(DataContext)
 
   return (
     <Layout>
@@ -37,11 +35,11 @@ export default function ContactPage() {
         <Button
           variant="primary"
           onClick={() => {
-            setCount(count + 1);
+            setCount(count + 1)
           }}
         >
           Click Me{' '}
-          {(count % 3 === 0 && count !== 0) || /3/.test(count.toString())
+          {(count % 3 === 0 && count !== 0) || count.toString().includes('3')
             ? '🤪'
             : '😀'}
         </Button>
@@ -55,20 +53,22 @@ export default function ContactPage() {
             onInput={(e) => {
               setSharedData({
                 ...sharedData,
-                email: (e.target as HTMLInputElement).value,
-              });
+                email: (e.target as HTMLInputElement).value
+              })
             }}
           />
           <Form.Text>
             We&apos;ll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
-        {mail_regex.test(sharedData.email) ? (
+        {mailRegex.test(sharedData.email)
+          ? (
           <Alert variant="success">Your email is valid.</Alert>
-        ) : (
+            )
+          : (
           <Alert variant="danger">Your email is invalid.</Alert>
-        )}
+            )}
       </div>
     </Layout>
-  );
+  )
 }
