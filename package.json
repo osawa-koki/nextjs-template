@@ -18,7 +18,9 @@
     "develop": "next",
     "build": "next build && next export -o ./dist",
     "start": "next start",
-    "test": "jest"
+    "test": "jest",
+    "lint:check": "eslint --ext .ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .ts,.tsx ."
   },
   "dependencies": {
     "@types/bootstrap": "^5.2.6",
