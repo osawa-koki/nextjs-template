@@ -1,6 +1,6 @@
-type SharedData = {
-  username: string;
-  email: string;
-};
+interface SharedData {
+  username: string
+  email: string
+}
 
-export default SharedData;
+export default SharedData

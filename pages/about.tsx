@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../components/Layout';
+import React from 'react'
+import Layout from '../components/Layout'
 
-export default function AboutPage() {
+export default function AboutPage (): JSX.Element {
   return (
     <Layout>
       <div id="About">
@@ -23,5 +23,5 @@ export default function AboutPage() {
         </p>
       </div>
     </Layout>
-  );
+  )
 }
