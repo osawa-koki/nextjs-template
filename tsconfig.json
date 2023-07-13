@@ -16,6 +16,6 @@
     "incremental": true,
     "strictNullChecks": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", ".eslintrc.js", "*.config.js"],
   "exclude": ["node_modules"]
 }
