@@ -7,7 +7,6 @@ import '../styles/style.scss'
 import '../styles/menu.scss'
 
 import setting from '../setting'
-import Layout from '../components/Layout'
 
 export default function MyApp ({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -22,9 +21,7 @@ export default function MyApp ({ Component, pageProps }: AppProps): JSX.Element 
           href={`${setting.basePath}/favicon.ico`}
         />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </>
   )
 }
