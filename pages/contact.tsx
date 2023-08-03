@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-
 import { Button, Alert, Form } from 'react-bootstrap'
-import Layout from '../components/Layout'
 
 const mailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
@@ -10,7 +8,7 @@ export default function ContactPage (): JSX.Element {
   const [email, setEmail] = useState('')
 
   return (
-    <Layout>
+    <>
       <div id='Contact'>
         <h1>Dummy Contact.</h1>
         <p className='mt-3'>
@@ -64,6 +62,6 @@ export default function ContactPage (): JSX.Element {
           <Alert variant='danger'>Your email is invalid.</Alert>
             )}
       </div>
-    </Layout>
+    </>
   )
 }
