@@ -9,9 +9,9 @@ export default function ContactPage (): JSX.Element {
 
   return (
     <>
-      <div id="Contact">
+      <div id='Contact'>
         <h1>Dummy Contact.</h1>
-        <p className="mt-3">
+        <p className='mt-3'>
           仮想DOMによってJSで管理しているデータを中心にHTMLを生成することができます。
           <br />
           <br />
@@ -27,9 +27,9 @@ export default function ContactPage (): JSX.Element {
           また、react-bootstrapによるBootstrapのサポートがあるため、簡単にBootstrapを導入できます。
         </p>
         <hr />
-        <Alert variant="info">You cliecked {count} times 🤣🤣🤣</Alert>
+        <Alert variant='info'>You cliecked {count} times 🤣🤣🤣</Alert>
         <Button
-          variant="primary"
+          variant='primary'
           onClick={() => {
             setCount(count + 1)
           }}
@@ -40,11 +40,11 @@ export default function ContactPage (): JSX.Element {
             : '😀'}
         </Button>
         <hr />
-        <Form.Group controlId="formBasicEmail" className="mt-3">
+        <Form.Group className='mt-3'>
           <Form.Label>Email address</Form.Label>
           <Form.Control
-            type="email"
-            placeholder="Enter email"
+            type='email'
+            placeholder='Enter email'
             value={email}
             onInput={(e) => {
               setEmail(e.currentTarget.value)
@@ -56,10 +56,10 @@ export default function ContactPage (): JSX.Element {
         </Form.Group>
         {mailRegex.test(email)
           ? (
-          <Alert variant="success">Your email is valid.</Alert>
+          <Alert variant='success'>Your email is valid.</Alert>
             )
           : (
-          <Alert variant="danger">Your email is invalid.</Alert>
+          <Alert variant='danger'>Your email is invalid.</Alert>
             )}
       </div>
     </>
