@@ -12,12 +12,12 @@ export default function MyApp ({ Component, pageProps }: AppProps): JSX.Element 
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
+        <meta charSet='utf-8' />
         <title>{setting.title}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <link
-          rel="icon"
-          type="image/png"
+          rel='icon'
+          type='image/png'
           href={`${setting.basePath}/favicon.ico`}
         />
       </Head>

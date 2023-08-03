@@ -4,9 +4,9 @@ import Layout from '../components/Layout'
 export default function AboutPage (): JSX.Element {
   return (
     <Layout>
-      <div id="About">
+      <div id='About'>
         <h1>Here, About page.</h1>
-        <p className="mt-3">
+        <p className='mt-3'>
           Next.js大好きです。
           <br />
           本当に使いやすいです。
