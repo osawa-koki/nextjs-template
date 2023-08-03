@@ -3,13 +3,11 @@ import React, { useState } from 'react'
 import { Button, Alert, Form } from 'react-bootstrap'
 import Layout from '../components/Layout'
 
-import { DataContext } from '../src/DataContext'
-
 const mailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
 export default function ContactPage (): JSX.Element {
   const [count, setCount] = useState(0)
-  const { sharedData, setSharedData } = React.useContext(DataContext)
+  const [email, setEmail] = useState('')
 
   return (
     <Layout>
@@ -49,19 +47,16 @@ export default function ContactPage (): JSX.Element {
           <Form.Control
             type="email"
             placeholder="Enter email"
-            value={sharedData.email}
+            value={email}
             onInput={(e) => {
-              setSharedData({
-                ...sharedData,
-                email: (e.target as HTMLInputElement).value
-              })
+              setEmail(e.currentTarget.value)
             }}
           />
           <Form.Text>
             We&apos;ll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
-        {mailRegex.test(sharedData.email)
+        {mailRegex.test(email)
           ? (
           <Alert variant="success">Your email is valid.</Alert>
             )
