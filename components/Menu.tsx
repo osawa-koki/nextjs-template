@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import pages from '../pages'
 import { Button } from 'react-bootstrap'
 import { BsGearFill } from 'react-icons/bs'
-import setting from '../setting'
 
 function Menu (): JSX.Element {
   const [currentPage, setCurrentPage] = useState<string>(pages[0].path)
