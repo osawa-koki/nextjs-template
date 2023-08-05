@@ -2,7 +2,6 @@ import React, { useState, type ReactNode, useEffect } from 'react'
 import Head from 'next/head'
 import setting from '../setting'
 import Menu from './Menu'
-import pages from '../pages'
 
 interface Props {
   children?: ReactNode
@@ -17,7 +16,7 @@ const Layout = ({
   menu = true,
   footer = true
 }: Props): JSX.Element => {
-  const [currentPage, setCurrentPage] = useState<string>(pages[0].path)
+  const [currentPage, setCurrentPage] = useState<string | null>(null)
 
   useEffect(() => {
     const path = window.location.pathname.replace(setting.basePath, '')

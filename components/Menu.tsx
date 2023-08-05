@@ -5,8 +5,8 @@ import { Button } from 'react-bootstrap'
 import { BsGearFill } from 'react-icons/bs'
 
 interface Props {
-  currentPage: string
-  setCurrentPage: React.Dispatch<React.SetStateAction<string>>
+  currentPage: string | null
+  setCurrentPage: React.Dispatch<React.SetStateAction<string | null>>
 }
 
 function Menu (props: Props): JSX.Element {
