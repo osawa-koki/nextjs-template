@@ -25,7 +25,7 @@ function Menu (): JSX.Element {
                   ? 'btn-primary'
                   : ''
               }`}
-              onClick={() => {changePage(page.path)}}
+              onClick={() => { changePage(page.path) }}
             >
               {page.emoji}&nbsp;{page.name}
             </Link>
