@@ -6,15 +6,11 @@ import { BsGearFill } from 'react-icons/bs'
 import setting from '../setting'
 
 function Menu (): JSX.Element {
-  const [currentPage, setCurrentPage] = useState<string | null>(null)
+  const [currentPage, setCurrentPage] = useState<string>(pages[0].path)
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
 
-  useEffect(() => {
-    setCurrentPage(window.location.pathname)
-  }, [])
-
-  const PageChanged = (): void => {
-    setCurrentPage(window.location.pathname)
+  const changePage = (page: string): void => {
+    setCurrentPage(page)
   }
 
   return (
@@ -26,11 +22,11 @@ function Menu (): JSX.Element {
               key={index}
               href={page.path}
               className={`btn ${
-                currentPage === `${setting.basePath}${page.path}`
+                currentPage === page.path
                   ? 'btn-primary'
                   : ''
               }`}
-              onClick={PageChanged}
+              onClick={() => {changePage(page.path)}}
             >
               {page.emoji}&nbsp;{page.name}
             </Link>
