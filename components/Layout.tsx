@@ -1,7 +1,8 @@
-import React, { type ReactNode } from 'react'
+import React, { useState, type ReactNode } from 'react'
 import Head from 'next/head'
 import setting from '../setting'
 import Menu from './Menu'
+import pages from '../pages'
 
 interface Props {
   children?: ReactNode
@@ -15,42 +16,50 @@ const Layout = ({
   title = setting.title,
   menu = true,
   footer = true
-}: Props): JSX.Element => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link
-        rel="shortcut icon"
-        href={`${setting.basePath}favicon.ico`}
-        type="image/x-icon"
-      />
-    </Head>
-    <div id="Wrapper">
-      {menu
-        ? (
-        <>
-          <main>{children}</main>
-          <Menu />
-        </>
-          )
-        : (
-            children
-          )}
+}: Props): JSX.Element => {
+  const [currentPage, setCurrentPage] = useState<string>(pages[0].path)
+
+  const changePage = (page: string): void => {
+    setCurrentPage(page)
+  }
+
+  return (
+    <div>
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link
+          rel="shortcut icon"
+          href={`${setting.basePath}favicon.ico`}
+          type="image/x-icon"
+        />
+      </Head>
+      <div id="Wrapper">
+        {menu
+          ? (
+          <>
+            <main>{children}</main>
+            <Menu currentPage={currentPage} changePage={changePage} />
+          </>
+            )
+          : (
+              children
+            )}
+      </div>
+      {footer && (
+        <footer>
+          <a
+            href="https://github.com/osawa-koki"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @osawa-koki
+          </a>
+        </footer>
+      )}
     </div>
-    {footer && (
-      <footer>
-        <a
-          href="https://github.com/osawa-koki"
-          target="_blank"
-          rel="noreferrer"
-        >
-          @osawa-koki
-        </a>
-      </footer>
-    )}
-  </div>
-)
+  )
+}
 
 export default Layout

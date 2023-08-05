@@ -4,13 +4,15 @@ import pages from '../pages'
 import { Button } from 'react-bootstrap'
 import { BsGearFill } from 'react-icons/bs'
 
-function Menu (): JSX.Element {
-  const [currentPage, setCurrentPage] = useState<string>(pages[0].path)
-  const [menuOpen, setMenuOpen] = useState<boolean>(false)
+interface Props {
+  currentPage: string
+  changePage: (page: string) => void
+}
 
-  const changePage = (page: string): void => {
-    setCurrentPage(page)
-  }
+function Menu (props: Props): JSX.Element {
+  const { currentPage, changePage } = props
+
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
 
   return (
     <>
