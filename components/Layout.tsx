@@ -1,4 +1,4 @@
-import React, { useState, type ReactNode } from 'react'
+import React, { useState, type ReactNode, useEffect } from 'react'
 import Head from 'next/head'
 import setting from '../setting'
 import Menu from './Menu'
@@ -19,9 +19,10 @@ const Layout = ({
 }: Props): JSX.Element => {
   const [currentPage, setCurrentPage] = useState<string>(pages[0].path)
 
-  const changePage = (page: string): void => {
-    setCurrentPage(page)
-  }
+  useEffect(() => {
+    const path = window.location.pathname.replace(setting.basePath, '')
+    setCurrentPage(path)
+  }, [])
 
   return (
     <div>
@@ -40,7 +41,7 @@ const Layout = ({
           ? (
           <>
             <main>{children}</main>
-            <Menu currentPage={currentPage} changePage={changePage} />
+            <Menu currentPage={currentPage} setCurrentPage={setCurrentPage} />
           </>
             )
           : (
