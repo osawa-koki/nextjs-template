@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import pages from '../pages'
 import { Button } from 'react-bootstrap'
 import { BsGearFill } from 'react-icons/bs'
-import setting from '../setting'
 
-function Menu (): JSX.Element {
-  const [currentPage, setCurrentPage] = useState<string>(pages[0].path)
+interface Props {
+  currentPage: string
+  changePage: (page: string) => void
+}
+
+function Menu (props: Props): JSX.Element {
+  const { currentPage, changePage } = props
+
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
-
-  const changePage = (page: string): void => {
-    setCurrentPage(page)
-  }
 
   return (
     <>
@@ -26,7 +27,7 @@ function Menu (): JSX.Element {
                   ? 'btn-primary'
                   : ''
               }`}
-              onClick={() => {changePage(page.path)}}
+              onClick={() => { changePage(page.path) }}
             >
               {page.emoji}&nbsp;{page.name}
             </Link>
