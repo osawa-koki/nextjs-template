@@ -16,7 +16,7 @@ function Menu (props: Props): JSX.Element {
 
   return (
     <>
-      <div id="Menu" className={menuOpen ? 'on' : ''}>
+      <div id='Menu' className={menuOpen ? 'on' : ''}>
         {pages.map((page, index: number) => {
           return (
             <Link
@@ -24,7 +24,7 @@ function Menu (props: Props): JSX.Element {
               href={page.path}
               className={`btn ${
                 currentPage === page.path
-                  ? 'btn-primary'
+                  ? 'btn-primary active'
                   : ''
               }`}
               onClick={() => { setCurrentPage(page.path) }}
@@ -34,17 +34,17 @@ function Menu (props: Props): JSX.Element {
           )
         })}
       </div>
-      <div id="ToMenu">
+      <div id='ToMenu'>
         <Button
-          id="Closer"
-          variant="primary"
+          id='Closer'
+          variant='primary'
           className={`btn-close btn-close-white ${menuOpen ? 'on' : ''}`}
           onClick={() => {
             setMenuOpen(false)
           }}
         ></Button>
         <BsGearFill
-          id="Opener"
+          id='Opener'
           className={menuOpen ? 'off' : ''}
           onClick={() => {
             setMenuOpen(true)

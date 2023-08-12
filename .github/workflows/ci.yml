@@ -1,4 +1,4 @@
-name: test, lint, prettier, audit
+name: ci
 
 on:
   push:
@@ -29,7 +29,9 @@ jobs:
         run: yarn install
       - name: Run tests
         run: yarn test
+      - name: Type check
+        run: yarn type-check
       - name: Linter check
-        run: yarn lint:check
+        run: yarn lint
       - name: Check for security vulnerabilities
         run: yarn audit
