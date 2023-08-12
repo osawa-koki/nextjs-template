@@ -15,8 +15,3 @@ yarn dev
 # ビルド
 yarn build
 ```
-
-## CI/CD
-
-`GitHub Actions`を使用しています。  
-`main`ブランチにマージされると自動でデプロイされます。  
