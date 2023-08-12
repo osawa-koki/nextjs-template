@@ -6,11 +6,10 @@ import { BsGearFill } from 'react-icons/bs'
 
 interface Props {
   currentPage: string | null
-  setCurrentPage: React.Dispatch<React.SetStateAction<string | null>>
 }
 
 function Menu (props: Props): JSX.Element {
-  const { currentPage, setCurrentPage } = props
+  const { currentPage } = props
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
 
@@ -27,7 +26,6 @@ function Menu (props: Props): JSX.Element {
                   ? 'btn-primary active'
                   : ''
               }`}
-              onClick={() => { setCurrentPage(page.path) }}
             >
               {page.emoji}&nbsp;{page.name}
             </Link>
