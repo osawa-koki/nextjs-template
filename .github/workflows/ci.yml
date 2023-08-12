@@ -1,4 +1,4 @@
-name: test, lint, prettier, audit
+name: ci
 
 on:
   push:
