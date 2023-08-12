@@ -22,7 +22,7 @@ const Layout = ({
   const [currentPage, setCurrentPage] = useState<string | null>(null)
 
   useEffect(() => {
-    const path = router.pathname.replace(setting.basePath, '')
+    const path = window.location.pathname.replace(setting.basePath, '')
     setCurrentPage(path)
   }, [router.pathname])
 
