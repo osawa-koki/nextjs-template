@@ -32,6 +32,6 @@ jobs:
       - name: Type check
         run: yarn type-check
       - name: Linter check
-        run: yarn lint:check
+        run: yarn lint
       - name: Check for security vulnerabilities
         run: yarn audit
