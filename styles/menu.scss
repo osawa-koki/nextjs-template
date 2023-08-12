@@ -29,8 +29,11 @@
   flex-direction: column;
   a {
     color: whitesmoke;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     text-align: left;
+    &:hover:not(.active) {
+      background-color: rgba(white, 0.25);
+    }
   }
 }
 
