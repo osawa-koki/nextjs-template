@@ -1,7 +1,6 @@
 {
   "name": "nextjs-template",
   "description": "My favorite Next.js project",
-  "version": "1.0.0",
   "author": "osawa-koki",
   "license": "Apache-2.0",
   "repository": {
@@ -23,8 +22,6 @@
     "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx ."
   },
   "dependencies": {
-    "@types/bootstrap": "^5.2.6",
-    "@types/react-bootstrap": "^0.32.32",
     "bootstrap": "^5.3.1",
     "next": "^13.4.13",
     "react": "^18.2.0",
@@ -35,10 +32,12 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.13",
+    "@types/bootstrap": "^5.2.6",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.4.10",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.4",
+    "@types/react-bootstrap": "^0.32.32",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "eslint": "^8.47.0",
     "eslint-config-standard-with-typescript": "^37.0.0",
