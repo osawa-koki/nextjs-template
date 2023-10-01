@@ -3,7 +3,7 @@ import { Button, Alert, Form } from 'react-bootstrap'
 
 const mailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
-export default function ContactPage (): JSX.Element {
+export default function ContactPage (): React.JSX.Element {
   const [count, setCount] = useState(0)
   const [email, setEmail] = useState('')
 
