@@ -8,7 +8,7 @@ interface Props {
   currentPage: string | null
 }
 
-function Menu (props: Props): JSX.Element {
+function Menu (props: Props): React.JSX.Element {
   const { currentPage } = props
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
