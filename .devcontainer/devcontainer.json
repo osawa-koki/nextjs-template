@@ -22,7 +22,17 @@
   "postCreateCommand": "cat /etc/os-release && node --version && yarn --version && yarn install",
 
   // Configure tool-specific properties.
-  "customizations": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "dbaeumer.vscode-eslint",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "DavidAnson.vscode-markdownlint"
+      ]
+    }
+  },
 
   // Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
   "remoteUser": "root"
