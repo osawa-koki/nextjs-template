@@ -5,12 +5,12 @@ on:
     branches:
       - main
       - develop
-      - 'issues/*'
+      - issues/*
   pull_request:
     branches:
       - main
       - develop
-      - 'issues/*'
+      - issues/*
 
 jobs:
   check:
@@ -25,9 +25,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules/
+          key: node-modules-${{ matrix.node-version }}-${{ hashFiles('./**/yarn.lock') }}
       - name: Install dependencies
+        if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn install
-      - name: Run tests
+      - name: Run test
         run: yarn test
       - name: Type check
         run: yarn type-check
