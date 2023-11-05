@@ -34,7 +34,7 @@ jobs:
           key: node-modules-${{ matrix.node-version }}-${{ hashFiles('./**/yarn.lock') }}
       - name: Install dependencies
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
-        run: yarn install
+        run: yarn install --frozen-lockfile --non-interactive
       - name: Run test
         run: yarn test
       - name: Type check
