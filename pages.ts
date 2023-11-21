@@ -1,4 +1,10 @@
-const pages = [
+interface Page {
+  emoji: string
+  path: string
+  name: string
+}
+
+const pages: Page[] = [
   {
     emoji: '🏠',
     path: '/',
