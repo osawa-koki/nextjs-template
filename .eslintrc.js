@@ -9,8 +9,7 @@ module.exports = {
     'plugin:@next/next/recommended',
     'standard-with-typescript'
   ],
-  overrides: [
-  ],
+  overrides: [],
   parserOptions: {
     project: './tsconfig.json',
     ecmaVersion: 'latest',
@@ -21,11 +20,10 @@ module.exports = {
   ],
   ignorePatterns: [
     '.next',
-    'node_modules',
     'build',
     'dist',
-    'next-env.d.ts'
+    'next-env.d.ts',
+    'node_modules'
   ],
-  rules: {
-  }
+  rules: {}
 }
