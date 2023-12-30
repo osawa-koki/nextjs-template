@@ -3,6 +3,9 @@
 🌰🌰🌰 Next.jsアプリのテンプレートです。  
 よく使用すると思われる`Bootstrap`と`SCSS`は既にインストールしてあります。  
 
+[![ci](https://github.com/osawa-koki/nextjs-template/actions/workflows/ci.yml/badge.svg)](https://github.com/osawa-koki/nextjs-template/actions/workflows/ci.yml)  
+[![cd](https://github.com/osawa-koki/nextjs-template/actions/workflows/cd.yml/badge.svg)](https://github.com/osawa-koki/nextjs-template/actions/workflows/cd.yml)  
+
 ## 実行方法
 
 ```shell
