@@ -17,5 +17,5 @@
     "strictNullChecks": true,
   },
   "include": ["**/*.ts", "**/*.tsx", ".eslintrc.js", "*.config.js"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "playwright.config.ts"]
 }
