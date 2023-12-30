@@ -1,5 +1,5 @@
 import { test } from '@playwright/test'
 
-test('has title', async ({ page }) => {
+test('can access index page', async ({ page }) => {
   await page.goto('/')
 })
