@@ -2,6 +2,9 @@ name: ci
 
 on: [ push ]
 
+env:
+  CI: 'true'
+
 jobs:
   check:
     runs-on: ubuntu-22.04
@@ -24,13 +27,20 @@ jobs:
       - name: Install dependencies
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile --non-interactive
-      - name: Run test
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
+      - name: Run tests
         run: yarn test
+      - name: Upload report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report-${{ matrix.node-version }}
+          path: ./playwright-report/
+          retention-days: 30
       - name: Type check
         run: yarn type-check
       - name: Linter check
         run: yarn lint
       - name: test build
         run: yarn build
-      # - name: Check for security vulnerabilities
-      #   run: yarn audit
