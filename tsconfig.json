@@ -30,7 +30,7 @@
     "**/*.tsx",
     ".eslintrc.cjs",
     "*.config.js",
-    "./build//types/**/*.ts",
+    "./build/types/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
