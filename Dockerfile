@@ -6,4 +6,4 @@ COPY ./ ./
 RUN yarn build
 
 FROM nginx:1.25 as server
-COPY --from=builder /src/build/ /usr/share/nginx/html/
+COPY --from=builder /src/out/ /usr/share/nginx/html/
