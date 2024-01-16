@@ -28,7 +28,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".eslintrc.js",
+    ".eslintrc.cjs",
     "*.config.js",
     "./build//types/**/*.ts",
     ".next/types/**/*.ts"

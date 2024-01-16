@@ -7,5 +7,5 @@ export default {
   apiPath: isProd ? '' : 'http://localhost:8000',
   title: '🐸 Next.js Template 🐸',
   description: 'Next.js Template 🐸🐸🐸',
-  keywords: [],
+  keywords: []
 }
