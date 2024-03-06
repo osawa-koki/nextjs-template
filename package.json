@@ -35,7 +35,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.0.4",
+    "@next/eslint-plugin-next": "^14.1.2",
     "@playwright/test": "^1.42.1",
     "@types/bootstrap": "^5.2.10",
     "@types/react": "^18.2.63",
