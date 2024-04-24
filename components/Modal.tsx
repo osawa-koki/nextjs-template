@@ -3,6 +3,8 @@
 import React from 'react'
 import ReactModal from 'react-modal'
 
+import { IoIosCloseCircle } from 'react-icons/io'
+
 const customStyles = {
   content: {
     top: '20%',
@@ -13,6 +15,14 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     minWidth: '40%'
   }
+}
+
+const closeButtonStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: '10px',
+  right: '10px',
+  zIndex: 1000,
+  cursor: 'pointer'
 }
 
 interface Props {
@@ -40,6 +50,10 @@ export default function Modal (props: Props): React.JSX.Element {
       contentLabel={contentLabel}
     >
       {children}
+      <IoIosCloseCircle
+        style={closeButtonStyle}
+        onClick={closeModal}
+      />
     </ReactModal>
   )
 }
