@@ -14,6 +14,10 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     minWidth: '40%'
+  },
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    zIndex: 1000
   }
 }
 
@@ -21,7 +25,7 @@ const closeButtonStyle: React.CSSProperties = {
   position: 'absolute',
   top: '10px',
   right: '10px',
-  zIndex: 1000,
+  zIndex: 1001,
   cursor: 'pointer'
 }
 
