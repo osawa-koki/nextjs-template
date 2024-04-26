@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
-import Modal from '../../components/Modal'
+
+import Modal from '@/components/Modal'
 
 export default function ModalPage (): React.JSX.Element {
   const [modalIsOpen, setIsOpen] = useState(false)
