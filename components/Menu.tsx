@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Button } from 'react-bootstrap'
 import { BsGearFill } from 'react-icons/bs'
 
-import pages from '../pages'
+import pages from '@/pages'
 
 interface Props {
   currentPage: string | null

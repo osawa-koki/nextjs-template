@@ -5,11 +5,11 @@ import { usePathname } from 'next/navigation'
 
 import { ToastContainer } from 'react-toastify'
 
-import '../styles/style.scss'
-import '../styles/menu.scss'
+import '@/styles/style.scss'
+import '@/styles/menu.scss'
 
-import setting from '../setting'
-import Menu from '../components/Menu'
+import setting from '@/setting'
+import Menu from '@/components/Menu'
 
 export default function RootLayout ({
   children
