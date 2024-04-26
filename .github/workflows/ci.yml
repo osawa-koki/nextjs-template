@@ -27,6 +27,10 @@ jobs:
       - name: Install dependencies
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile --non-interactive
+      - name: Type check
+        run: yarn type-check
+      - name: Linter check
+        run: yarn lint
       - name: Install Playwright Browsers
         run: yarn playwright install --with-deps
       - name: Run tests
@@ -38,9 +42,5 @@ jobs:
           name: playwright-report-${{ matrix.node-version }}
           path: ./playwright-report/
           retention-days: 30
-      - name: Type check
-        run: yarn type-check
-      - name: Linter check
-        run: yarn lint
       - name: test build
         run: yarn build
