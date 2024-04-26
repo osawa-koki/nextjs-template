@@ -55,11 +55,13 @@ export default function Modal (props: Props): React.JSX.Element {
       style={{ ...customStyles, ...styles }}
       contentLabel={contentLabel}
     >
-      {children}
-      <IoIosCloseCircle
-        style={closeButtonStyle}
-        onClick={closeModal}
-      />
+      <>
+        {children}
+        <IoIosCloseCircle
+          style={closeButtonStyle}
+          onClick={closeModal}
+        />
+      </>
     </ReactModal>
   )
 }
