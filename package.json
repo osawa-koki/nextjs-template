@@ -33,7 +33,7 @@
     "react-modal": "^3.16.1",
     "react-toastify": "^10.0.5",
     "sass": "^1.77.6",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.4",
