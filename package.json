@@ -16,7 +16,6 @@
   "scripts": {
     "dev": "yarn next dev --port 8000",
     "build": "next build",
-    "start": "next start",
     "test": "playwright test",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx .",
