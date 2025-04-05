@@ -10,13 +10,13 @@
 
 ```shell
 # モジュールのインストール
-yarn install
+npm install
 
 # 開発用実行
-yarn dev
+npm run dev
 
 # ビルド
-yarn build
+npm run build
 ```
 
 Dockerを使用する場合は以下のコマンドを実行してください。  
