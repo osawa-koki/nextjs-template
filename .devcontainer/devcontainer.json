@@ -20,7 +20,7 @@
   "forwardPorts": [8000],
 
   // Uncomment the next line to run commands after the container is created.
-  "postCreateCommand": "cat /etc/os-release && node --version && yarn --version && yarn install",
+  "postCreateCommand": "cat /etc/os-release && node --version && npm --version && npm install",
 
   // Configure tool-specific properties.
   "customizations": {

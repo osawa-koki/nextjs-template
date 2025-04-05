@@ -23,18 +23,18 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ./node_modules/
-          key: node-modules-${{ matrix.node-version }}-${{ hashFiles('./**/yarn.lock') }}
+          key: node-modules-${{ matrix.node-version }}-${{ hashFiles('./**/package-lock.json') }}
       - name: Install dependencies
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile --non-interactive
+        run: npm ci
       - name: Type check
-        run: yarn type-check
+        run: npm run type-check
       - name: Linter check
-        run: yarn lint
+        run: npm run lint
       - name: Install Playwright Browsers
-        run: yarn playwright install --with-deps
+        run: npx playwright install --with-deps
       - name: Run tests
-        run: yarn test
+        run: npm run test
       - name: Upload report
         uses: actions/upload-artifact@v4
         if: always()
@@ -43,4 +43,4 @@ jobs:
           path: ./playwright-report/
           retention-days: 30
       - name: test build
-        run: yarn build
+        run: npm run build
