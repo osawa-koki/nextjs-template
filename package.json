@@ -22,9 +22,9 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@types/node": "^22.13.8",
+    "@types/node": "^22.14.0",
     "bootstrap": "^5.3.5",
-    "next": "^15.2.0",
+    "next": "^15.2.4",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^18.3.1",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.2.4",
-    "@playwright/test": "^1.50.1",
+    "@playwright/test": "^1.51.1",
     "@types/bootstrap": "^5.2.10",
     "@types/react": "^18.3.13",
     "@types/react-bootstrap": "^0.32.37",
